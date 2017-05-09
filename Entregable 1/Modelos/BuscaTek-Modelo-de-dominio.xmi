@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_sNzSwCMFEeeIU6Q3We1LBQ" name="BuscaTek (Modelo de dominio)">
+  <eAnnotations xmi:id="_sNzSwSMFEeeIU6Q3We1LBQ" source="Objing">
+    <contents xmi:type="uml:Property" xmi:id="_sNzSwiMFEeeIU6Q3We1LBQ" name="exporterVersion">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_sNzSwyMFEeeIU6Q3We1LBQ" value="3.0.0"/>
+    </contents>
+  </eAnnotations>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sNzSxCMFEeeIU6Q3We1LBQ" name="Palabras claves">
+    <ownedAttribute xmi:id="_sNzSxSMFEeeIU6Q3We1LBQ" name="conforman" visibility="public" type="_sNzS4yMFEeeIU6Q3We1LBQ" association="_sNzSxyMFEeeIU6Q3We1LBQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sNzSxiMFEeeIU6Q3We1LBQ" value="*"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sNzSxyMFEeeIU6Q3We1LBQ" memberEnd="_sNzSxSMFEeeIU6Q3We1LBQ _sNzS5iMFEeeIU6Q3We1LBQ"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sNzSyCMFEeeIU6Q3We1LBQ" name="Sitios">
+    <ownedAttribute xmi:id="_sNzSySMFEeeIU6Q3We1LBQ" name="tienen" visibility="public" type="_sNzS4yMFEeeIU6Q3We1LBQ" association="_sNzSzCMFEeeIU6Q3We1LBQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sNzSyiMFEeeIU6Q3We1LBQ" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sNzSyyMFEeeIU6Q3We1LBQ" name="es validado por" visibility="public" type="_sNzS3iMFEeeIU6Q3We1LBQ" association="_sNzSzSMFEeeIU6Q3We1LBQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sNzSzCMFEeeIU6Q3We1LBQ" memberEnd="_sNzSySMFEeeIU6Q3We1LBQ _sNzS5CMFEeeIU6Q3We1LBQ"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sNzSzSMFEeeIU6Q3We1LBQ" memberEnd="_sNzSyyMFEeeIU6Q3We1LBQ _sNzS4CMFEeeIU6Q3We1LBQ"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sNzSziMFEeeIU6Q3We1LBQ" name="Estilos">
+    <ownedAttribute xmi:id="_sNzSzyMFEeeIU6Q3We1LBQ" name="tienen" visibility="public" type="_sNzSxCMFEeeIU6Q3We1LBQ" association="_sNzS1iMFEeeIU6Q3We1LBQ">
+      <ownedComment xmi:id="_sNzS0CMFEeeIU6Q3We1LBQ">
+        <body></body>
+      </ownedComment>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sNzS0SMFEeeIU6Q3We1LBQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sNzS0iMFEeeIU6Q3We1LBQ"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sNzS0yMFEeeIU6Q3We1LBQ" name="pertenecen" visibility="public" type="_sNzS2yMFEeeIU6Q3We1LBQ" association="_sNzS2SMFEeeIU6Q3We1LBQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sNzS1CMFEeeIU6Q3We1LBQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sNzS1SMFEeeIU6Q3We1LBQ"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sNzS1iMFEeeIU6Q3We1LBQ" memberEnd="_sNzSzyMFEeeIU6Q3We1LBQ _sNzS1yMFEeeIU6Q3We1LBQ">
+    <ownedEnd xmi:id="_sNzS1yMFEeeIU6Q3We1LBQ" name="pertenece" visibility="public" type="_sNzSziMFEeeIU6Q3We1LBQ" association="_sNzS1iMFEeeIU6Q3We1LBQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sNzS2CMFEeeIU6Q3We1LBQ" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sNzS2SMFEeeIU6Q3We1LBQ" memberEnd="_sNzS0yMFEeeIU6Q3We1LBQ _sNzS3SMFEeeIU6Q3We1LBQ"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sNzS2iMFEeeIU6Q3We1LBQ" name="Persona"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sNzS2yMFEeeIU6Q3We1LBQ" name="Estudiante">
+    <generalization xmi:id="_sNzS3CMFEeeIU6Q3We1LBQ" general="_sNzS2iMFEeeIU6Q3We1LBQ"/>
+    <ownedAttribute xmi:id="_sNzS3SMFEeeIU6Q3We1LBQ" name="posee" visibility="public" type="_sNzSziMFEeeIU6Q3We1LBQ" association="_sNzS2SMFEeeIU6Q3We1LBQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sNzS3iMFEeeIU6Q3We1LBQ" name="Profesor">
+    <generalization xmi:id="_sNzS3yMFEeeIU6Q3We1LBQ" general="_sNzS2iMFEeeIU6Q3We1LBQ"/>
+    <ownedAttribute xmi:id="_sNzS4CMFEeeIU6Q3We1LBQ" name="valida" visibility="public" type="_sNzSyCMFEeeIU6Q3We1LBQ" association="_sNzSzSMFEeeIU6Q3We1LBQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sNzS4SMFEeeIU6Q3We1LBQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sNzS4iMFEeeIU6Q3We1LBQ"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sNzS4yMFEeeIU6Q3We1LBQ" name="Busquedas">
+    <ownedAttribute xmi:id="_sNzS5CMFEeeIU6Q3We1LBQ" name="pertenecen" visibility="public" type="_sNzSyCMFEeeIU6Q3We1LBQ" association="_sNzSzCMFEeeIU6Q3We1LBQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sNzS5SMFEeeIU6Q3We1LBQ" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sNzS5iMFEeeIU6Q3We1LBQ" name="compuestas por" visibility="public" type="_sNzSxCMFEeeIU6Q3We1LBQ" association="_sNzSxyMFEeeIU6Q3We1LBQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sNzS5yMFEeeIU6Q3We1LBQ"/>
+    </ownedAttribute>
+  </packagedElement>
+</uml:Model>
