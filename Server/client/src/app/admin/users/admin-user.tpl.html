@@ -43,60 +43,60 @@
                 </div>
                 <!-- show this div if there isn't an admin linked to this user -->
                 <div class="input-group" ng-if="!(user.roles && user.roles.admin)">
-                    <input type="text" name="newAdminId" placeholder="enter admin id" class="form-control" ng-model="role.newAdminId" required>
+                    <input type="text" name="newAdminId" placeholder="ingresar id admin" class="form-control" ng-model="role.newAdminId" required>
                     <div class="input-group-btn">
                         <button type="button" class="btn btn-success" ng-disabled="!(roleForm.newAdminId.$dirty && roleForm.newAdminId.$valid)" ng-click="linkAdmin()">Link</button>
                     </div>
                 </div>
-                <span class="help-block" ng-if="!(user.roles && user.roles.admin)" ng-show="showError(roleForm.newAdminId, 'required')">This field is required</span>
+                <span class="help-block" ng-if="!(user.roles && user.roles.admin)" ng-show="showError(roleForm.newAdminId, 'required')">Campo obligatorio</span>
             </div>
             <div class="form-group" ng-class="{'has-error': roleForm.newAccountId && hasError(roleForm.newAccountId)}">
-                <label class="control-label">Account:</label>
+                <label class="control-label">Cuenta:</label>
                 <!-- show this div if there is an account linked to this user -->
                 <div class="input-group" ng-show="user.roles && user.roles.account">
                     <input type="text" name="accountId" class="form-control" ng-model="user.roles.account.name.full" disabled>
                     <div class="input-group-btn">
                         <button type="button" class="btn btn-warning" ng-click="unlinkAccount()">Unlink</button>
-                        <a type="button" class="btn btn-default" ng-href="/admin/accounts/{{user.roles.account._id}}">Open</a>
+                        <a type="button" class="btn btn-default" ng-href="/admin/accounts/{{user.roles.account._id}}">Abrir</a>
                     </div>
                     </div>
                 <!-- show this div if there isn't an account linked to this user -->
                 <div class="input-group" ng-if="!(user.roles && user.roles.account)">
-                    <input type="text" name="newAccountId" placeholder="enter account id" class="form-control" ng-model="role.newAccountId" required>
+                    <input type="text" name="newAccountId" placeholder="ingresar id cuenta" class="form-control" ng-model="role.newAccountId" required>
                     <div class="input-group-btn">
                         <button type="button" class="btn btn-success" ng-disabled="!(roleForm.newAccountId.$dirty && roleForm.newAccountId.$valid)" ng-click="linkAccount()">Link</button>
                     </div>
                 </div>
-                <span class="help-block" ng-if="!(user.roles && user.roles.account)" ng-show="showError(roleForm.newAccountId, 'required')">This field is required</span>
+                <span class="help-block" ng-if="!(user.roles && user.roles.account)" ng-show="showError(roleForm.newAccountId, 'required')">Campo obligatorio</span>
             </div>
         </fieldset></form>
         <form name="passwordForm"><fieldset>
-            <legend>Set Password</legend>
+            <legend>Cambiar contraseña</legend>
             <alert ng-repeat="alert in passwordAlerts" type="{{alert.type}}" close="closePasswordAlert($index)">{{alert.msg}}</alert>
             <div class="form-group" ng-class="{'has-error': hasError(passwordForm.password)}">
-                <label class="control-label" for="password">New Password:</label>
+                <label class="control-label" for="password">Nueva Contraseña:</label>
                 <input type="password" name="password" id="password" class="form-control" ng-model="pass.newPassword" required>
-                <span class="help-block" ng-show="showError(passwordForm.password, 'required')">This field is required</span>
+                <span class="help-block" ng-show="showError(passwordForm.password, 'required')">Campo obligatorio</span>
             </div>
             <div class="form-group" ng-class="{'has-error': hasError(passwordForm.confirm)}">
-                <label class="control-label" for="confirm">Confirm Password:</label>
+                <label class="control-label" for="confirm">Confirmar Contraseña:</label>
                 <input type="password" name="confirm" id="confirm" class="form-control" ng-model="pass.confirm" required>
-                <span class="help-block" ng-show="showError(passwordForm.confirm, 'required')">This field is required</span>
+                <span class="help-block" ng-show="showError(passwordForm.confirm, 'required')">Campo obligatorio</span>
             </div>
             <div class="form-group">
-                <button type="button" class="btn btn-primary" ng-disabled="!canSave(passwordForm)" ng-click="setPassword()">Set Password</button>
+                <button type="button" class="btn btn-primary" ng-disabled="!canSave(passwordForm)" ng-click="setPassword()">Cambiar contraseña</button>
             </div>
         </fieldset></form>
         <form name="deleteForm"><fieldset>
-            <legend>Danger Zone</legend>
+            <legend>Zona peligrosa</legend>
             <alert ng-repeat="alert in deleteAlerts" type="{{alert.type}}" close="closeDeleteAlert($index)">{{alert.msg}}</alert>
             <div class="form-group">
                 <span class="help-block">
-                    <span class="label label-danger">If you do this, it cannot be undone.</span>&nbsp;<span class="text-muted">You may also create orphaned document relationships too.</span>
+                    <span class="label label-danger">Si haces esto, no se puede volver atrás.</span>&nbsp;<span class="text-muted">además podrías dejar información basura.</span>
                 </span>
             </div>
             <div class="form-group">
-                <button type="button" class="btn btn-danger" ng-click="deleteUser()">Delete</button>
+                <button type="button" class="btn btn-danger" ng-click="deleteUser()">Borrar</button>
             </div>
         </fieldset></form>
     </div>

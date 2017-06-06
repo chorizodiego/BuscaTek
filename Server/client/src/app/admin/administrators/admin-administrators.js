@@ -4,7 +4,7 @@ angular.module('admin.administrators.index').config(['$routeProvider', function(
     .when('/admin/administrators', {
       templateUrl: 'admin/administrators/admin-administrators.tpl.html',
       controller: 'AdministratorsIndexCtrl',
-      title: 'Manage Administrators',
+      title: 'Administradores',
       resolve: {
         administrators: ['$q', '$location', '$log', 'securityAuthorization', 'adminResource', function($q, $location, $log, securityAuthorization, adminResource){
           //get app stats only for admin-user, otherwise redirect to /account

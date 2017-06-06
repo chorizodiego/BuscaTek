@@ -4,7 +4,7 @@ angular.module('account.verification').config(['$routeProvider', function($route
     .when('/account/verification', {
       templateUrl: 'account/verification/account-verification.tpl.html',
       controller: 'AccountVerificationCtrl',
-      title: 'Verification Required',
+      title: 'Verificación Requerida',
       resolve: {
         upsertVerificationToken: ['$q', '$location', 'accountResource', 'securityAuthorization', function($q, $location, restResource, securityAuthorization){
           //lazy upsert verification only for un-verified user, otherwise redirect to /account

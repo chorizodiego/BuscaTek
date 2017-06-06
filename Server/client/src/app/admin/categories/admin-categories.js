@@ -4,7 +4,7 @@ angular.module('admin.categories.index').config(['$routeProvider', function($rou
     .when('/admin/categories', {
       templateUrl: 'admin/categories/admin-categories.tpl.html',
       controller: 'CategoriesIndexCtrl',
-      title: 'Manage Categories',
+      title: 'Administrar Categorías',
       resolve: {
         categories: ['$q', '$location', '$log', 'securityAuthorization', 'adminResource', function($q, $location, $log, securityAuthorization, adminResource){
           //get app stats only for admin-user, otherwise redirect to /account

@@ -12,7 +12,7 @@
                 <label class="control-label" for="email">Tu correo:</label>
                 <input type="email" name="email" id="email" class="form-control" ng-model="msg.email" required>
                 <span class="help-block" ng-show="showError(msgForm.email, 'required')">Campo obligatorio</span>
-                <span class="help-block" ng-show="showError(msgForm.email, 'email')">Por favor, usa un correo valido</span>
+                <span class="help-block" ng-show="showError(msgForm.email, 'email')">Por favor, usa un correo válido</span>
             </div>
             <div class="form-group" ng-class="{'has-error': hasError(msgForm.message)}">
                 <label class="control-label" for="message">Mensaje:</label>
@@ -20,13 +20,13 @@
                 <span class="help-block" ng-show="showError(msgForm.message, 'required')">Campo obligatorio</span>
             </div>
             <div class="form-group">
-                <button type="button" class="btn btn-primary btn-contact" ng-disabled="!canSave(msgForm)" ng-click="submit()">Send Message</button>
+                <button type="button" class="btn btn-primary btn-contact" ng-disabled="!canSave(msgForm)" ng-click="submit()">Enviar Mensaje</button>
             </div>
         </form>
     </div>
     <div class="col-sm-6 special">
         <div class="page-header"><h1>Contáctanos</h1></div>
-        <p class="lead">wowowowow</p><i class="fa fa-reply-all super-awesome"></i>
+        <p class="lead">No dudes en contactarnos, estamos disponibles para ayudarte!</p><i class="fa fa-reply-all super-awesome"></i>
         <address>P. Sherman, 42 Wallaby Way, Sydney</address>
     </div>
 </div>

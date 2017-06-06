@@ -4,7 +4,7 @@ angular.module('admin.users.index').config(['$routeProvider', function($routePro
     .when('/admin/users', {
       templateUrl: 'admin/users/admin-users.tpl.html',
       controller: 'UsersIndexCtrl',
-      title: 'Manage Users',
+      title: 'Administrar Usuarios',
       resolve: {
         users: ['$q', '$location', '$log', 'securityAuthorization', 'adminResource', function($q, $location, $log, securityAuthorization, adminResource){
           //get app stats only for admin-user, otherwise redirect to /account
@@ -84,8 +84,8 @@ angular.module('admin.users.index').controller('UsersIndexCtrl', ['$scope', '$ro
 
     // $scope vars
     //select elements and their associating options
-    $scope.roles = [{label: "any", value: ""}, {label: "admin", value: "admin"}, {label: "account", value: "account"}];
-    $scope.isActives =[{label: "either", value: ""}, {label: "yes", value: "yes"}, {label: "no", value: "no"}];
+    $scope.roles = [{label: "ninguno", value: ""}, {label: "admin", value: "admin"}, {label: "account", value: "account"}];
+    $scope.isActives =[{label: "ninguno", value: ""}, {label: "si", value: "yes"}, {label: "no", value: "no"}];
     $scope.sorts = [
       {label: "id \u25B2", value: "_id"},
       {label: "id \u25BC", value: "-_id"},

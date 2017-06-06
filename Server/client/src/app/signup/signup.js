@@ -4,7 +4,7 @@ angular.module('signup').config(['$routeProvider', function($routeProvider){
     .when('/signup', {
       templateUrl: 'signup/signup.tpl.html',
       controller: 'SignupCtrl',
-      title: 'Sign Up',
+      title: 'Registro',
       resolve: {
         UnauthenticatedUser: ['$q', '$location', 'securityAuthorization', function($q, $location, securityAuthorization){
           var promise = securityAuthorization.requireUnauthenticatedUser()

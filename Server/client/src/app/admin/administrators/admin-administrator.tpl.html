@@ -4,7 +4,7 @@
             <h1><a href="/admin/administrators">Administradores</a> / {{administrator.name.full}}</h1>
         </div>
         <form name="contactForm"><fieldset>
-            <legend>Contact Info</legend>
+            <legend>Información de Contacto</legend>
             <alert ng-repeat="alert in contactAlerts" type="{{alert.type}}" close="closeContactAlert($index)">{{alert.msg}}</alert>
             <div class="form-group" ng-class="{'has-error': hasError(contactForm.first)}">
                 <label class="control-label" for="first">Nombre:</label>
@@ -21,7 +21,7 @@
             </div>
         </fieldset></form>
         <form name="loginForm"><fieldset>
-            <legend>Login</legend>
+            <legend>Iniciar Sesión</legend>
             <alert ng-repeat="alert in loginAlerts" type="{{alert.type}}" close="closeLoginAlert($index)">{{alert.msg}}</alert>
             <div class="form-group" ng-class="{'has-error': loginForm.newUsername && hasError(loginForm.newUsername)}">
                 <label class="control-label">Usuario::</label>
@@ -29,7 +29,7 @@
                 <div class="input-group" ng-show="administrator.user && administrator.user.name">
                     <input type="text" name="username" class="form-control" ng-model="administrator.user.name" disabled>
                     <div class="input-group-btn" >
-                        <button type="button" class="btn btn-warning" ng-click="unlinkUser()">Desenlazar? (pa que sirve esta wea?)</button>
+                        <button type="button" class="btn btn-warning" ng-click="unlinkUser()">Desenlazar</button>
                         <a type="button" class="btn btn-default" ng-href="/admin/users/{{administrator.user.id}}">Abrir</a>
                     </div>
                 </div>
@@ -61,12 +61,12 @@
                     <div class="input-group" ng-repeat="permission in administrator.permissions">
                         <input disabled ng-model="permission.name" class="form-control" disabled>
                         <div class="input-group-btn">
-                            <button type="button" class="btn btn-default" ng-class="{disabled: permission.permit}" ng-click="togglePermission($index)">Allow</button>
-                            <button type="button" class="btn btn-default" ng-class="{disabled: !permission.permit}" ng-click="togglePermission($index)">Deny</button>
+                            <button type="button" class="btn btn-default" ng-class="{disabled: permission.permit}" ng-click="togglePermission($index)">Permitir</button>
+                            <button type="button" class="btn btn-default" ng-class="{disabled: !permission.permit}" ng-click="togglePermission($index)">Denegar</button>
                             <button type="button" class="btn btn-danger btn-delete" ng-click="deletePermission($index)"><i class="fa fa-trash-o fa-inverse"></i></button>
                         </div>
                     </div>
-                    <span class="badge" ng-show="administrator.permissions.length === 0">no hay permisos</span>
+                    <span class="badge" ng-show="administrator.permissions.length === 0">No hay permisos</span>
                 </div>
             </div>
             <div class="form-group">
@@ -74,11 +74,11 @@
             </div>
         </fieldset></form>
         <form name="deleteForm"><fieldset>
-            <legend>PELIGRO</legend>
+            <legend>Zona peligrosa</legend>
             <alert ng-repeat="alert in deleteAlerts" type="{{alert.type}}" close="closeDeleteAlert($index)">{{alert.msg}}</alert>
             <div class="form-group">
                 <span class="help-block">
-                    <span class="label label-danger">Danger danger cuidado.</span>&nbsp;<span class="text-muted">xzxc.</span>
+                    <span class="label label-danger">Si haces esto, no se puede volver atrás.</span>&nbsp;<span class="text-muted">además podrías dejar información basura.</span>
                 </span>
             </div>
             <div class="form-group">

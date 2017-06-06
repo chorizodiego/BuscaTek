@@ -4,7 +4,7 @@ angular.module('login.index').config(['$routeProvider', function($routeProvider)
     .when('/login', {
       templateUrl: 'login/login.tpl.html',
       controller: 'LoginCtrl',
-      title: 'Login',
+      title: 'Inicio de Sesión',
       resolve: {
         UnauthenticatedUser: ['$q', '$location', 'securityAuthorization', function($q, $location, securityAuthorization){
           var promise = securityAuthorization.requireUnauthenticatedUser()

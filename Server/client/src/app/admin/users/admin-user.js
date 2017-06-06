@@ -4,7 +4,7 @@ angular.module('admin.users.detail').config(['$routeProvider', function($routePr
     .when('/admin/users/:id', {
       templateUrl: 'admin/users/admin-user.tpl.html',
       controller: 'UsersDetailCtrl',
-      title: 'Users / Details',
+      title: 'Usuarios / Detalles',
       resolve: {
         user: ['$q', '$route', '$location', 'securityAuthorization', 'adminResource', function($q, $route, $location, securityAuthorization, adminResource){
           //get app stats only for admin-user, otherwise redirect to /account
@@ -94,7 +94,7 @@ angular.module('admin.users.detail').controller('UsersDetailCtrl', ['$scope', '$
     $scope.roleAlerts = [];
     $scope.deleteAlerts = [];
     $scope.errfor = {};
-    $scope.isActives = ["yes", "no"];
+    $scope.isActives = ["si", "no"];
     $scope.canSave = utility.canSave;
     $scope.hasError = utility.hasError;
     $scope.showError = utility.showError;
